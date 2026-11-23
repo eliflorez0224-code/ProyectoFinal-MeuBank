@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/verdefondo2"
+    tools:context=".AgregarDatosActivity">
+
+    <LinearLayout
+        android:id="@+id/barraSuperior"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icono_meu" />
+
+        <TextView
+            android:id="@+id/tvTituloPantalla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="AGREGAR DATOS"
+            android:textColor="@color/black"
+            android:textSize="48dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icono_libreta" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvPregunta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="¿Qué tipo de dato quieres agregar?"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barraSuperior" />
+
+    <Button
+        android:id="@+id/btnNuevoIngreso"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="48dp"
+        android:layout_marginTop="40dp"
+        android:text="Nuevo Ingreso"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        app:backgroundTint="@color/verde3"
+        app:cornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPregunta" />
+
+    <Button
+        android:id="@+id/btnNuevoGasto"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="48dp"
+        android:layout_marginTop="24dp"
+        android:text="Nuevo Gasto"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        app:backgroundTint="@color/verde3"
+        app:cornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnNuevoIngreso" />
+
+    <Button
+        android:id="@+id/btnNuevaMeta"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="48dp"
+        android:layout_marginTop="24dp"
+        android:text="Nuevo ahorro"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        app:backgroundTint="@color/verde3"
+        app:cornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnNuevoGasto" />
+
+    <LinearLayout
+        android:id="@+id/barraInferior"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@color/verde2"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageButton
+            android:id="@+id/navInicio"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Inicio"
+            android:padding="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icono_casa"
+            app:tint="@color/verde1" />
+
+        <ImageButton
+            android:id="@+id/navAgregar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/verdefondo"
+            android:contentDescription="Agregar movimiento"
+            android:padding="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icono_mas"
+            app:tint="@color/black" />
+
+        <ImageButton
+            android:id="@+id/navPerfil"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Perfil"
+            android:padding="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icono_persona"
+            app:tint="@color/verde1" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
